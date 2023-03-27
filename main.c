@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include <string.h>
 
 enum {
@@ -48,7 +47,7 @@ int main(int argc, char* argv[]) {
 	char* flag = argv[2];
 
 	int i;
-	bool valid = false;
+	int valid = 0;
 
 	if (flag[0] != '-') {
 		err("Invalid flag");
@@ -58,17 +57,17 @@ int main(int argc, char* argv[]) {
 
 	if (!strcmp(flag, "-round")) {
 		i = ROUND;
-		valid = true;
+		valid = 1;
 	}
 
 	if (!strcmp(flag, "-sq")) {
 		i = SQ;
-		valid = true;
+		valid = 1;
 	}
 
 	if (!strcmp(flag, "-curly")) {
 		i = CURLY;
-		valid = true;
+		valid = 1;
 	}
 
 	if (!valid) {
