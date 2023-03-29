@@ -71,7 +71,7 @@ int main(int argc, char* argv[]) {
 	}
 
 	if (!valid) {
-		err("No flag");
+		err("Invalid flag");
 
 		return 1;
 	}
