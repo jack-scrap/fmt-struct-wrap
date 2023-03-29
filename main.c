@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 enum {
 	ROUND,
@@ -61,17 +62,20 @@ int main(int argc, char* argv[]) {
 		return 1;
 	}
 
-	if (!strcmp(flag, "-round")) {
+	char* id = malloc(strlen(flag) + 1 - 1 * sizeof (char));
+	strcpy(id, &flag[1]);
+
+	if (!strcmp(id, "round")) {
 		i = ROUND;
 		valid = 1;
 	}
 
-	if (!strcmp(flag, "-sq")) {
+	if (!strcmp(id, "sq")) {
 		i = SQ;
 		valid = 1;
 	}
 
-	if (!strcmp(flag, "-curly")) {
+	if (!strcmp(id, "curly")) {
 		i = CURLY;
 		valid = 1;
 	}
