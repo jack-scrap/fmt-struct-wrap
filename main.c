@@ -55,6 +55,12 @@ int main(int argc, char* argv[]) {
 		return 1;
 	}
 
+	if (strlen(flag) <= 1) {
+		err("Invalid flag");
+
+		return 1;
+	}
+
 	if (!strcmp(flag, "-round")) {
 		i = ROUND;
 		valid = 1;
