@@ -86,7 +86,7 @@ int main(int argc, char* argv[]) {
 		return 1;
 	}
 
-	printf("%c%s%c\n", pair[i][OPEN], buff, pair[i][CLOSE]);
+	printf("%c%s%c", pair[i][OPEN], buff, pair[i][CLOSE]);
 
 	return 0;
 }
